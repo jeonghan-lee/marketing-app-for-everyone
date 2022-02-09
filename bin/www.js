@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
+
 /**
  * Module dependencies.
  */
-
- import app from 'app/app.js';
+ import 'module-alias/register';
+ import app from 'app';
  import debug from 'debug'; debug('marketing-app-for-everyone:server');
  import http from 'http';
  

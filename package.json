@@ -3,22 +3,37 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "start": "babel-node ./bin/www",
+    "dev": "nodemon ./bin/www --exec babel-node"
   },
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "^4.16.4",
-    "fund": "^1.0.0",
-    "mongoose": "^6.2.1",
-    "morgan": "~1.9.1"
+  "_moduleAliases": {
+    "app": "./app",
+    "@routes": "routes",
+    "@api": "routes/api"
   },
-  "type": "module",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
   "description": "",
   "main": "app.js",
   "bin": {
     "marketing-app-for-everyone": "bin/www.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "axios": "^0.25.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "fund": "^1.0.0",
+    "googleapis": "^95.0.0",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.2.1",
+    "morgan": "~1.9.1"
   },
   "repository": {
     "type": "git",

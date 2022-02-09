@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "app/*": ["app/*"]
+      "app": ["app.js"],
+      "@routes/*": ["routes/*"],
+      "@api/*": ["api/*"]
     }
   }
 }
